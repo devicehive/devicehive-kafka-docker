@@ -1,5 +1,5 @@
-FROM wurstmeister/kafka:0.10.0.1
+FROM wurstmeister/kafka:0.10.2.1
 
-ADD start-kafka-zookeper.sh /usr/bin/start-kafka-zookeper.sh
-RUN chmod a+x /usr/bin/start-kafka-zookeper.sh
-CMD ["start-kafka-zookeper.sh"]
+ADD wait-for-zookeeper.sh /usr/bin/wait-for-zookeeper.sh
+RUN chmod a+x /usr/bin/wait-for-zookeeper.sh
+CMD ["wait-for-zookeeper.sh"]
